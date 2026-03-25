@@ -12,7 +12,7 @@ export class LoginPOM
         this.page=page;
         this.usernameInput=page.locator("#user-name");
         this.passwordInput=page.locator("#password");
-        this.loginButton=page.locator("Login");
+        this.loginButton=page.locator("#login-button");
         this.pageLogo=page.locator(".login_logo").textContent();
 
 
@@ -20,7 +20,7 @@ export class LoginPOM
     async performLoginAction(uname:string,pass:string)
     {
         await this.usernameInput.fill(uname);
-        await this.passwordInput.fill(pass)
+        await this.passwordInput.fill(pass);
         await this.loginButton.click();
     }
 
