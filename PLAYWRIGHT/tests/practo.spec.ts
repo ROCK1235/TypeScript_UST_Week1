@@ -126,9 +126,14 @@ test("Test Upload Files ",async ({ page }) => {
 
     await page.locator("//div[@class='record-upload-add-tile text-small text-center']").click();
     const fileUpload=await page.locator("//div[@class='record-upload-add-tile text-small text-center']");
-     await fileUpload.setInputFiles("C:\\Users\\308233\\Downloads\\Book1.pdf");
-    //await page.locator("input[type='file']").setInputFiles("C:\\Users\\308233\\Downloads\\Book1.pdf");
+    //await fileUpload.setInputFiles("C:\\Users\\308233\\Downloads\\Book1.pdf");
+    //const filePath = "C:\\Users\\308233\\Downloads\\Book1.pdf";
+    
+    await page.locator("input[type='file']").setInputFiles("C:\\Users\\308233\\Downloads\\Book1.pdf");
     await page.waitForTimeout(3000);
+
+    //set a your file first in a variable
+    //then do locator.setFiles("fileLink");
 
 
     
