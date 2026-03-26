@@ -14,11 +14,11 @@ test.describe('Login Functionality', () => {
 
   test('Login with locked user credentials', async ({ Given, Then, And, page }) => { 
     await Given('user is on login page', null, { page }); 
-    await Then('user enters locked username', null, { page }); 
-    await And('user enters password', null, { page }); 
+    await Then('user enters username as "performance_glitch_user"', null, { page }); 
+    await And('user enters password as "secret_sauce"', null, { page }); 
     await And('user clicks login button', null, { page }); 
-    await Then('user gets an error message', null, { page }); 
-    await And('user is back on login page', null, { page }); 
+    await Then('user is logged in successfully', null, { page }); 
+    await And('user is able to navigate to product page', null, { page }); 
   });
 
 });
@@ -33,5 +33,5 @@ test.use({
 
 const bddFileData = [ // bdd-data-start
   {"pwTestLine":6,"pickleLine":2,"tags":[],"steps":[{"pwStepLine":7,"gherkinStepLine":3,"keywordType":"Context","textWithKeyword":"Given user is on login page","stepMatchArguments":[]},{"pwStepLine":8,"gherkinStepLine":4,"keywordType":"Outcome","textWithKeyword":"Then user enters username","stepMatchArguments":[]},{"pwStepLine":9,"gherkinStepLine":5,"keywordType":"Outcome","textWithKeyword":"And user enters password","stepMatchArguments":[]},{"pwStepLine":10,"gherkinStepLine":6,"keywordType":"Outcome","textWithKeyword":"And user clicks login button","stepMatchArguments":[]},{"pwStepLine":11,"gherkinStepLine":7,"keywordType":"Outcome","textWithKeyword":"Then user is logged in successfully","stepMatchArguments":[]},{"pwStepLine":12,"gherkinStepLine":8,"keywordType":"Outcome","textWithKeyword":"And user is able to navigate to product page","stepMatchArguments":[]}]},
-  {"pwTestLine":15,"pickleLine":12,"tags":[],"steps":[{"pwStepLine":16,"gherkinStepLine":13,"keywordType":"Context","textWithKeyword":"Given user is on login page","stepMatchArguments":[]},{"pwStepLine":17,"gherkinStepLine":14,"keywordType":"Outcome","textWithKeyword":"Then user enters locked username","stepMatchArguments":[]},{"pwStepLine":18,"gherkinStepLine":15,"keywordType":"Outcome","textWithKeyword":"And user enters password","stepMatchArguments":[]},{"pwStepLine":19,"gherkinStepLine":16,"keywordType":"Outcome","textWithKeyword":"And user clicks login button","stepMatchArguments":[]},{"pwStepLine":20,"gherkinStepLine":17,"keywordType":"Outcome","textWithKeyword":"Then user gets an error message","stepMatchArguments":[]},{"pwStepLine":21,"gherkinStepLine":18,"keywordType":"Outcome","textWithKeyword":"And user is back on login page","stepMatchArguments":[]}]},
+  {"pwTestLine":15,"pickleLine":12,"tags":[],"steps":[{"pwStepLine":16,"gherkinStepLine":13,"keywordType":"Context","textWithKeyword":"Given user is on login page","stepMatchArguments":[]},{"pwStepLine":17,"gherkinStepLine":14,"keywordType":"Outcome","textWithKeyword":"Then user enters username as \"performance_glitch_user\"","stepMatchArguments":[{"group":{"start":24,"value":"\"performance_glitch_user\"","children":[{"start":25,"value":"performance_glitch_user","children":[{"children":[]}]},{"children":[{"children":[]}]}]},"parameterTypeName":"string"}]},{"pwStepLine":18,"gherkinStepLine":15,"keywordType":"Outcome","textWithKeyword":"And user enters password as \"secret_sauce\"","stepMatchArguments":[{"group":{"start":24,"value":"\"secret_sauce\"","children":[{"start":25,"value":"secret_sauce","children":[{"children":[]}]},{"children":[{"children":[]}]}]},"parameterTypeName":"string"}]},{"pwStepLine":19,"gherkinStepLine":16,"keywordType":"Outcome","textWithKeyword":"And user clicks login button","stepMatchArguments":[]},{"pwStepLine":20,"gherkinStepLine":17,"keywordType":"Outcome","textWithKeyword":"Then user is logged in successfully","stepMatchArguments":[]},{"pwStepLine":21,"gherkinStepLine":18,"keywordType":"Outcome","textWithKeyword":"And user is able to navigate to product page","stepMatchArguments":[]}]},
 ]; // bdd-data-end
