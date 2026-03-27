@@ -6,7 +6,12 @@
   "scripts": {
     "bdd:gen":"bddgen",
     "test": "playwright test",
-    "bdd": "npm run bdd:gen && npm run test" 
+    "bdd": "npm run bdd:gen && npm run test" ,
+    "bdd:sanity":"bddgen && playwright test --grep @sanity",
+    "bdd:regression":"bddgen && @playwright test --grep @regression",
+    "bdd:addProduct":"bddgen && playwright test --grep @addProduct",
+    "bdd:viewProduct":"bddgen && @playwright test --grep @viewProduct"
+
   },
   "keywords": [],
   "author": "",

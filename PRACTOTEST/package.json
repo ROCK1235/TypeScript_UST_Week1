@@ -6,7 +6,10 @@
   "scripts": {
     "bdd:gen":"bddgen",
     "test": "playwright test",
-    "bdd": "npm run bdd:gen && npm run test" 
+    "bdd": "npm run bdd:gen && npm run test"
+    
+
+    
   },
   "keywords": [],
   "author": "",

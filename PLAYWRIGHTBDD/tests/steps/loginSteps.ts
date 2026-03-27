@@ -2,17 +2,94 @@
 import{test,expect} from '@playwright/test'
 import{createBdd} from 'playwright-bdd'
 const {Given,When,Then}=createBdd();
-Given('user is on login page', async ({page}) => {
-  await page.goto("https://saucedemo.com");
-});
+// Given('user is on login page', async ({page}) => {
+//   await page.goto("https://saucedemo.com");
+// });
 
-Then('user enters username', async ({page}) => {
- await page.locator("#user-name").fill('standard_user');
-});
+// Then('user enters username', async ({page}) => {
+//  await page.locator("#user-name").fill('standard_user');
+// });
 
-Then('user enters password', async ({page}) => {
-  await page.locator("#password").fill('secret_sauce');
-});
+// Then('user enters password', async ({page}) => {
+//   await page.locator("#password").fill('secret_sauce');
+// });
+
+// // Then('user clicks login button', async ({page}) => {
+// //   await page.locator("#login-button").click();
+// // });
+
+// // Then('user is logged in successfully', async ({page}) => {
+// //   const actualUrl=await page.url();
+// //   await expect(actualUrl).toBe("https://www.saucedemo.com/inventory.html");
+// // });
+
+// // Then('user is able to navigate to product page', async ({page}) => {
+// //   const logo=await page.locator("//span[text()='Products']").textContent();
+// //   await expect(logo).toBe("Products");
+// // });
+
+// //                         /*
+// //                         Created By Ayush\\
+
+
+
+// //                         */
+
+// // Then('user enters locked username', async ({page}) => {
+// //   await page.locator("#user-name").fill('locked_out_user');
+// // });
+
+// // Then('user gets an error message', async ({page}) => {
+// //   const errorMessage=await page.locator("//h3[text()='Epic sadface: Sorry, this user has been locked out.']").textContent();
+// //   await expect(errorMessage).toBe("Epic sadface: Sorry, this user has been locked out.");
+  
+// // });
+
+// // Then('user is back on login page', async ({page}) => {
+// //   const pageUrl=await page.url();
+// //   await expect(pageUrl).toBe("https://www.saucedemo.com/");
+// // });
+
+
+//                     /*
+//                         Created By Ayush\\
+//                         Reviewed by-Manager
+
+
+//                         */
+
+
+
+// Then('user enters username as {string}', async ({page}, arg: string) => {
+//   await page.locator('#user-name').fill(arg);
+// });
+
+// Then('user enters password as {string}', async ({page}, arg: string) => {
+//   await page.locator('#password').fill(arg);
+// });
+
+// Then('user clicks login button', async ({page}) => {
+//   await page.locator("#login-button").click();
+// });
+// Then('user is logged in successfully', async ({page}) => {
+//   const actualUrl=await page.url();
+//   await expect(actualUrl).toBe("https://www.saucedemo.com/inventory.html");
+// });
+// Then('user is able to navigate to product page', async ({page}) => {
+//   let actualTitle=await page.getByText("Products").textContent();
+// });
+
+// Given('user is on login page', async ({page}) => {
+//  await page.goto("https://www.saucedemo.com")
+// });
+
+// Then('User enters {string}', async ({page}, username) => {
+//   await page.locator('#user-name').fill(username);
+// });
+
+// Then('user enters {string}', async ({page}, password) => {
+//   await page.locator('#password').fill(password);
+// });
 
 // Then('user clicks login button', async ({page}) => {
 //   await page.locator("#login-button").click();
@@ -24,57 +101,34 @@ Then('user enters password', async ({page}) => {
 // });
 
 // Then('user is able to navigate to product page', async ({page}) => {
-//   const logo=await page.locator("//span[text()='Products']").textContent();
-//   await expect(logo).toBe("Products");
+//   let actualTitle=await page.getByText("Products").textContent();
+//   await expect(actualTitle).toBe("Products");
+
 // });
 
-//                         /*
-//                         Created By Ayush\\
-
-
-
-//                         */
-
-// Then('user enters locked username', async ({page}) => {
-//   await page.locator("#user-name").fill('locked_out_user');
+// Given('user is on login page', async ({page}) => {
+//   await page.goto("https://saucedemo.com");
 // });
 
-// Then('user gets an error message', async ({page}) => {
-//   const errorMessage=await page.locator("//h3[text()='Epic sadface: Sorry, this user has been locked out.']").textContent();
-//   await expect(errorMessage).toBe("Epic sadface: Sorry, this user has been locked out.");
-  
+// When('User enters <username> and enters <password>', async ({page}, dataTable) => {
+//   const userLogin=dataTable.hashes();
+//   const user=userLogin[0].username;
+//   const pass=userLogin[0].password;
+
+//   await page.locator("#user-name").fill(user);
+//   await page.locator("#password").fill(pass);
 // });
 
-// Then('user is back on login page', async ({page}) => {
-//   const pageUrl=await page.url();
-//   await expect(pageUrl).toBe("https://www.saucedemo.com/");
+// When('user clicks login button', async ({page}) => {
+//   await page.locator("#login-button").click();
 // });
 
+// Then('user is logged in successfully', async ({page}) => {
+//   const actualUrl=await page.url();
+//   await expect(actualUrl).toBe("https://www.saucedemo.com/inventory.html");
+// });
 
-                    /*
-                        Created By Ayush\\
-                        Reviewed by-Manager
-
-
-                        */
-
-
-
-Then('user enters username as {string}', async ({page}, arg: string) => {
-  await page.locator('#user-name').fill(arg);
-});
-
-Then('user enters password as {string}', async ({page}, arg: string) => {
-  await page.locator('#password').fill(arg);
-});
-
-Then('user clicks login button', async ({page}) => {
-  await page.locator("#login-button").click();
-});
-Then('user is logged in successfully', async ({page}) => {
-  const actualUrl=await page.url();
-  await expect(actualUrl).toBe("https://www.saucedemo.com/inventory.html");
-});
-Then('user is able to navigate to product page', async ({page}) => {
-  let actualTitle=await page.getByText("Products").textContent();
-});
+// Then('user is able to navigate to product page', async ({page}) => {
+//     let actualTitle=await page.getByText("Products").textContent();
+//   await expect(actualTitle).toBe("Products");
+// });
